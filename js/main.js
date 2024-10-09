@@ -24,3 +24,22 @@
   }) 
 
 })();
+
+(() => {
+  let detals = document.querySelector('.js_main_wrap_detals');
+  let popDetals = document.querySelector('.js_pop_detals');
+  
+  detals.addEventListener('click', function(){
+    popDetals.classList.toggle('active');
+  })
+
+  document.addEventListener('click', (e) => {
+    const lkEl = e.composedPath().includes(popDetals);
+    const gambLk = e.composedPath().includes(detals);
+    if (!lkEl && !gambLk) {
+      popDetals.classList.remove('active');
+    }
+
+  })
+
+})();
