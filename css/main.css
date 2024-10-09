@@ -966,8 +966,9 @@ footer {
 
   .main_wrap_cloud.cloud2 {
     top: 90px;
-    right: 10px;
-    opacity: .8;
+    right: 30px;
+    opacity: 1;
+    width: 150px;
   }
 
   .main_wrap_detals {
