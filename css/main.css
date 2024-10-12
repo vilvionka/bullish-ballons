@@ -613,9 +613,446 @@ footer {
   top: 500px;
   display: none;
 }
-.pop_detals.active{
+
+.pop_detals.active {
   display: block;
 }
+
+.pop_game {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(180deg, #3E84E3 0.4%, #BBE5EF 98.87%);
+  display: none;
+  overflow: hidden;
+}
+
+.pop_game.active {
+  display: block;
+}
+
+.pop_game_wrap {
+  position: relative;
+  width: 1146px;
+  margin: 0 auto;
+  height: calc(100vh - 10%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.pop_game_wrap_avatar {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-top: 24px;
+}
+
+.pop_game_wrap_avatar_item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: calc(100%/5);
+}
+
+.pop_game_wrap_avatar_item span {
+  color: #fff;
+  font-family: 'Titan One';
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 16px;
+  text-align: center;
+  display: block;
+  margin-top: 16px;
+  text-stroke: 1px #F66532;
+  -webkit-text-stroke: 1px #F66532;
+}
+
+.pop_game_wrap_ballons {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+}
+
+.pop_game_wrap_ballons_item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: calc(100%/5);
+  position: relative;
+  height: 295px;
+}
+
+.pop_game_wrap_ballons_item_box {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.pop_game_wrap_ballons_item_box_ballons {
+  width: 116px;
+}
+
+.pop_game_wrap_ballons_item_box_rating {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 19px;
+  width: 100%;
+  height: 30px;
+  position: relative;
+}
+
+.pop_game_wrap_ballons_item_box_rating::after {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  filter: blur(20px);
+  background: #fff;
+  content: '';
+  opacity: .56;
+  display: block;
+  z-index: -1;
+
+}
+
+.pop_game_wrap_ballons_item_box_rating p {
+  font-size: 14px;
+  margin-left: 4px;
+}
+
+.low .pop_game_wrap_ballons_item_box_rating p {
+  color: #E24513;
+}
+
+.high .pop_game_wrap_ballons_item_box_rating p {
+  color: #097742;
+}
+
+.low .pop_game_wrap_ballons_item_box_rating span {
+  border: 5px solid transparent;
+  border-top: 5px solid #E24513;
+  margin-top: 5px;
+}
+
+.high .pop_game_wrap_ballons_item_box_rating span {
+  border: 5px solid transparent;
+  border-bottom: 5px solid #097742;
+  margin-top: -5px;
+}
+
+.pop_game_wrap_ballons_item_box_info {
+  background: #E3D0A4;
+  box-shadow: 0px 4px 8px 0px #A59485 inset, 0px 1px 1px 0px #FFFFFF7A;
+  border: 1px solid #FFFFFF;
+  margin-top: 12px;
+  padding: 8px 12px;
+  border-radius: 20px;
+  width: 134px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pop_game_wrap_ballons_item_box_info div {
+  display: flex;
+  align-items: center;
+}
+
+.pop_game_wrap_ballons_item_box_info div:nth-child(1) {
+  margin-bottom: 4px;
+}
+
+.pop_game_wrap_ballons_item_box_info div p {
+  margin-left: 4px;
+  font-size: 14px;
+}
+
+.low .pop_game_wrap_ballons_item_box_info div p {
+  color: #E24513;
+}
+
+.high .pop_game_wrap_ballons_item_box_info div p {
+  color: #097742;
+}
+
+.low .pop_game_wrap_ballons_item_box_info div span {
+  border: 5px solid transparent;
+  border-top: 5px solid #E24513;
+  margin-top: 5px;
+}
+
+.high .pop_game_wrap_ballons_item_box_info div span {
+  border: 5px solid transparent;
+  border-bottom: 5px solid #097742;
+  margin-top: -5px;
+}
+
+.pop_game_sun {
+  position: absolute;
+  top: -20px;
+  left: -20px;
+}
+
+.pop_game_earth {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+}
+
+.pop_game_oblako {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+
+}
+.pop_game_oblako.active {
+  animation: moveOblako 15s ease-in-out forwards;
+}
+
+@keyframes moveOblako {
+  0% {
+    bottom: 0;
+  }
+  100% {
+    bottom: -700px;
+  }
+}
+
+.pop_game_countdown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 162px;
+  height: 162px;
+  border-radius: 50%;
+  box-shadow: 4px 4px 24px 0px #A76F423D;
+  background: linear-gradient(135.91deg, #FFF7E5 15.62%, #E0CB9A 55%);
+  border: 2px solid #FFFFFF;
+  position: absolute;
+  border-radius: 50%;
+  position: absolute;
+  top: 25%;
+  left: calc(50% - 84px);
+  transition: .3s;
+}
+
+.pop_game_countdown.active {
+  transform: scale(0);
+}
+
+.pop_game_countdown::after {
+  content: '';
+  display: block;
+  position: absolute;
+  border-radius: 50%;
+  width: 168px;
+  height: 168px;
+  background-image: linear-gradient(180deg, #F68D2D 0%, #F33834 100%);
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+}
+
+.pop_game_countdown span {
+  font-family: 'Titan One';
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 48px;
+  text-align: center;
+  display: block;
+  margin: 0 8px;
+  color: #fff;
+  -webkit-text-stroke: 3px #F2705C;
+  /* Толщина и цвет обводки */
+  text-stroke: 3px #F2705C;
+}
+
+.pop_game_ob1 {
+  position: absolute;
+  top: 290px;
+  left: calc((100% - 1146px)/2 + 50px);
+  z-index: -2;
+  pointer-events: none;
+}
+.pop_game_ob1.active {
+  animation: moveOb1 22s ease-in-out forwards;
+}
+
+@keyframes moveOb1 {
+  0% {
+    top: 290px;
+  }
+  100% {
+    top: 1100px;
+  }
+}
+.pop_game_ob1_1{
+  position: absolute;
+  top: -150px;
+  left: calc((100% - 1146px)/2 + 270px);
+  transform: scale(.5);
+}
+.pop_game_ob1_1.active {
+  animation: moveOb1_1 24s ease-in-out forwards 5s;
+}
+
+@keyframes moveOb1_1 {
+  0% {
+    top: -150px;
+  }
+  100% {
+    top: 1200px;
+  }
+}
+
+.pop_game_ob3 {
+  position: absolute;
+  bottom: 390px;
+  left: calc((100% - 1146px)/2 + 400px);
+  z-index: -2;
+  pointer-events: none;
+}
+.pop_game_ob3.active {
+  animation: moveOb3 20s ease-in-out forwards;
+}
+
+@keyframes moveOb3 {
+  0% {
+    bottom: 390px;
+  }
+  100% {
+    bottom: -200px;
+  }
+}
+.pop_game_ob3_1 {
+  position: absolute;
+  top: -390px;
+  right: calc((100% - 1146px)/2 + 10px);
+  z-index: -2;
+  pointer-events: none;
+  transform: scale(1.3);
+}
+.pop_game_ob3_1.active {
+  animation: moveOb3_1 14s ease-in-out forwards 8s;
+}
+
+@keyframes moveOb3_1 {
+  0% {
+    top: -390px;
+  }
+  100% {
+    top: 1100px;
+  }
+}
+
+.pop_game_ob2 {
+  position: absolute;
+  top: 220px;
+  right: calc((100% - 1146px)/2 + 122px);
+  z-index: -2;
+  pointer-events: none;
+}
+
+.pop_game_ob2.active {
+  animation: moveOb2 18s ease-in-out forwards;
+}
+
+@keyframes moveOb2 {
+  0% {
+    top: 220px;
+  }
+  100% {
+    top: 1200px;
+  }
+}
+
+.pop_game_pt1 {
+  z-index: -2;
+  pointer-events: none;
+  position: absolute;
+  top: 200px;
+  left: calc((100% - 1146px)/2 + 220px);
+}
+.pop_game_pt1.active {
+  animation: movePt1 11s ease-in-out forwards;
+}
+
+@keyframes movePt1 {
+  0% {
+    top: 200px;
+  }
+  100% {
+    top: 1200px;
+  }
+}
+
+.pop_game_pt2 {
+  z-index: -2;
+  pointer-events: none;
+  position: absolute;
+  top: 210px;
+  left: calc((100% - 1146px)/2 + 740px);
+}
+.pop_game_pt2.active {
+  animation: movePt2 12s ease-in-out forwards;
+}
+
+@keyframes movePt2 {
+  0% {
+    top: 210px;
+  }
+  100% {
+    top: 1200px;
+  }
+}
+
+.pop_game_pt3 {
+  z-index: -2;
+  pointer-events: none;
+  position: absolute;
+  top: 410px;
+  left: calc((100% - 1146px)/2 + 780px);
+}
+.pop_game_pt3.active {
+  animation: movePt3 9s ease-in-out forwards;
+}
+
+@keyframes movePt3 {
+  0% {
+    top: 410px;
+  }
+  100% {
+    top: 1200px;
+  }
+}
+
+.pop_game_earth.active {
+  animation: moveEarth 11s ease-in-out forwards;
+}
+
+@keyframes moveEarth {
+  0% {
+    bottom: 0;
+  }
+  100% {
+    bottom: -540px;
+  }
+}
+
+
 
 @media (max-width: 1170px) {
   .container {
@@ -679,6 +1116,7 @@ footer {
   .main_partners {
     display: none;
   }
+
   .pop_detals {
     top: 410px;
   }
@@ -799,6 +1237,7 @@ footer {
     left: initial;
     right: 90px;
   }
+
   .pop_detals {
     top: 410px;
     width: 450px;
@@ -940,6 +1379,7 @@ footer {
   .main_wrap_detals svg {
     height: 9px;
   }
+
   .pop_detals {
     top: 290px;
     max-width: 400px;
@@ -1028,6 +1468,7 @@ footer {
     height: 20px;
     top: 50px;
   }
+
   .pop_detals {
     top: 270px;
     max-width: 320px;
@@ -1090,6 +1531,7 @@ footer {
     opacity: 1;
     width: 150px;
   }
+
   .pop_detals {
     top: 250px;
     max-width: 300px;
