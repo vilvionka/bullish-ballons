@@ -1,48 +1,4 @@
-let bDiff1 = 0;
-let moveId1 = null;
-function move1() {
-  bDiff1= bDiff1 + 1;
-  if (bDiff1 >= 380) {
-    clearInterval(moveId1);
-  }
-  document.querySelector('#moved1').style.bottom = bDiff1 + 'px';
-}
-let bDiff2 = 0;
-let moveId2 = null;
-function move2() {
-  bDiff2 = bDiff2 + 1;
-  if (bDiff2 >= 380) {
-    clearInterval(moveId2);
-  }
-  document.querySelector('#moved2').style.bottom = bDiff2 + 'px';
-}
-let bDiff3 = 0;
-let moveId3 = null;
-function move3() {
-  bDiff3 = bDiff3 + 1;
-  if (bDiff3 >= 380) {
-    clearInterval(moveId3);
-  }
-  document.querySelector('#moved3').style.bottom = bDiff3 + 'px';
-}
-let bDiff4 = 0;
-let moveId4 = null;
-function move4() {
-  bDiff4 = bDiff4 + 1;
-  if (bDiff4 >= 380) {
-    clearInterval(moveId4);
-  }
-  document.querySelector('#moved4').style.bottom = bDiff4 + 'px';
-}
-let bDiff5 = 0;
-let moveId5 = null;
-function move5() {
-  bDiff5 = bDiff5 + 1;
-  if (bDiff5 >= 380) {
-    clearInterval(moveId5);
-  }
-  document.querySelector('#moved5').style.bottom = bDiff5 + 'px';
-}
+
 
 
 (() => {

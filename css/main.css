@@ -451,6 +451,7 @@ header {
   background: linear-gradient(180deg, #FCBD3F 0%, #F23B34 70.6%);
   box-shadow: 4px 4px 24px 0px #00000029;
   border: 1px solid #FFFFFF;
+  text-decoration: none;
 }
 
 .main_race span {
@@ -808,6 +809,11 @@ footer {
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
+  height: 537px;
+  background-image: url(../img/img/bg_game_modal/earth.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .pop_game_oblako {
@@ -817,6 +823,7 @@ footer {
   width: 100%;
 
 }
+
 .pop_game_oblako.active {
   animation: moveOblako 15s ease-in-out forwards;
 }
@@ -825,12 +832,13 @@ footer {
   0% {
     bottom: 0;
   }
+
   100% {
     bottom: -700px;
   }
 }
 
-.pop_game_countdown {
+.pop_game_countdown_box {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -842,28 +850,27 @@ footer {
   border: 2px solid #FFFFFF;
   position: absolute;
   border-radius: 50%;
-  position: absolute;
-  top: 25%;
-  left: calc(50% - 84px);
   transition: .3s;
 }
 
 .pop_game_countdown.active {
-  transform: scale(0);
+  transform: scale(.3);
+  left: calc(100% - 140px);
+  top: 50px;
 }
 
-.pop_game_countdown::after {
-  content: '';
-  display: block;
-  position: absolute;
+.pop_game_countdown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 50%;
   width: 168px;
   height: 168px;
   background-image: linear-gradient(180deg, #F68D2D 0%, #F33834 100%);
-  top: 50%;
-  left: 50%;
-  z-index: -1;
-  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 25%;
+  left: calc(50% - 84px);
+  transition: .3s;
 }
 
 .pop_game_countdown span {
@@ -880,6 +887,23 @@ footer {
   text-stroke: 3px #F2705C;
 }
 
+.pop_game_close {
+  position: absolute;
+  top: 32px;
+  right: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135.91deg, #FFF7E5 15.62%, #E0CB9A 55%);
+  border-radius: 50%;
+  background: linear-gradient(135.91deg, #FFF7E5 15.62%, #E0CB9A 55%);
+  border: 1px solid #FFFFFF;
+  box-shadow: 4px 4px 24px 0px #A76F423D;
+  width: 48px;
+  height: 48px;
+  z-index: 5;
+}
+
 .pop_game_ob1 {
   position: absolute;
   top: 290px;
@@ -887,6 +911,7 @@ footer {
   z-index: -2;
   pointer-events: none;
 }
+
 .pop_game_ob1.active {
   animation: moveOb1 22s ease-in-out forwards;
 }
@@ -895,16 +920,19 @@ footer {
   0% {
     top: 290px;
   }
+
   100% {
     top: 1100px;
   }
 }
-.pop_game_ob1_1{
+
+.pop_game_ob1_1 {
   position: absolute;
   top: -150px;
   left: calc((100% - 1146px)/2 + 270px);
   transform: scale(.5);
 }
+
 .pop_game_ob1_1.active {
   animation: moveOb1_1 24s ease-in-out forwards 5s;
 }
@@ -913,6 +941,7 @@ footer {
   0% {
     top: -150px;
   }
+
   100% {
     top: 1200px;
   }
@@ -925,6 +954,7 @@ footer {
   z-index: -2;
   pointer-events: none;
 }
+
 .pop_game_ob3.active {
   animation: moveOb3 20s ease-in-out forwards;
 }
@@ -933,10 +963,12 @@ footer {
   0% {
     bottom: 390px;
   }
+
   100% {
     bottom: -200px;
   }
 }
+
 .pop_game_ob3_1 {
   position: absolute;
   top: -390px;
@@ -945,6 +977,7 @@ footer {
   pointer-events: none;
   transform: scale(1.3);
 }
+
 .pop_game_ob3_1.active {
   animation: moveOb3_1 14s ease-in-out forwards 8s;
 }
@@ -953,6 +986,7 @@ footer {
   0% {
     top: -390px;
   }
+
   100% {
     top: 1100px;
   }
@@ -974,6 +1008,7 @@ footer {
   0% {
     top: 220px;
   }
+
   100% {
     top: 1200px;
   }
@@ -986,6 +1021,7 @@ footer {
   top: 200px;
   left: calc((100% - 1146px)/2 + 220px);
 }
+
 .pop_game_pt1.active {
   animation: movePt1 11s ease-in-out forwards;
 }
@@ -994,6 +1030,7 @@ footer {
   0% {
     top: 200px;
   }
+
   100% {
     top: 1200px;
   }
@@ -1006,6 +1043,7 @@ footer {
   top: 210px;
   left: calc((100% - 1146px)/2 + 740px);
 }
+
 .pop_game_pt2.active {
   animation: movePt2 12s ease-in-out forwards;
 }
@@ -1014,6 +1052,7 @@ footer {
   0% {
     top: 210px;
   }
+
   100% {
     top: 1200px;
   }
@@ -1026,6 +1065,7 @@ footer {
   top: 410px;
   left: calc((100% - 1146px)/2 + 780px);
 }
+
 .pop_game_pt3.active {
   animation: movePt3 9s ease-in-out forwards;
 }
@@ -1034,6 +1074,7 @@ footer {
   0% {
     top: 410px;
   }
+
   100% {
     top: 1200px;
   }
@@ -1047,6 +1088,7 @@ footer {
   0% {
     bottom: 0;
   }
+
   100% {
     bottom: -540px;
   }
@@ -1059,6 +1101,10 @@ footer {
     width: auto;
     padding-left: 20px;
     padding-right: 20px;
+  }
+
+  .pop_game_wrap {
+    width: 850px;
   }
 }
 
@@ -1119,6 +1165,148 @@ footer {
 
   .pop_detals {
     top: 410px;
+  }
+
+  .pop_game_wrap {
+    width: auto;
+    padding: 0 20px;
+  }
+
+  .pop_game_wrap_avatar_item img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .pop_game_wrap_avatar {
+    margin-top: 48px;
+  }
+
+  .pop_game_wrap_avatar_item span {
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 11px;
+    margin-top: 8px;
+  }
+
+  .pop_game_close {
+    top: 12px;
+    right: 20px;
+    width: 24px;
+    height: 24px;
+  }
+
+  .pop_game_close svg {
+    width: 12px;
+    height: 12px;
+  }
+
+  .pop_game_countdown.active {
+    transform: scale(.26);
+    left: calc(100% - 120px);
+    top: -25px;
+  }
+
+  .pop_game_countdown.active span {
+    font-size: 35px;
+  }
+
+  .pop_game_countdown.active img {
+    display: none;
+  }
+
+  .pop_game_countdown {
+    width: 100px;
+    height: 100px;
+    left: calc(50% - 50px);
+  }
+
+  .pop_game_countdown_box {
+    width: 96px;
+    height: 96px;
+  }
+
+  .pop_game_countdown_box img {
+    width: 20px;
+  }
+
+  .pop_game_countdown span {
+    font-size: 30px;
+    line-height: 30px;
+    margin: 0 5px;
+    color: #fff;
+    -webkit-text-stroke: 2px #F2705C;
+    text-stroke: 2px #F2705C;
+  }
+
+  .pop_game_wrap_ballons_item_box_ballons {
+    width: 70px;
+  }
+
+  .pop_game_wrap_ballons_item_box_info div:nth-child(1) p {
+    display: none;
+  }
+
+  .pop_game_wrap_ballons_item_box_info {
+    margin-top: 8px;
+    padding: 8px 12px;
+    min-width: 80px;
+    width: 100%;
+  }
+
+  .pop_game_wrap_ballons_item {
+    height: 206px;
+  }
+
+  .pop_game_wrap_ballons_item_box_rating {
+    margin-bottom: 8px;
+    height: 25px;
+  }
+
+  .pop_game_ob2 {
+    top: 220px;
+    right: 80px;
+  }
+
+  .pop_game_ob3 {
+    bottom: 360px;
+    left: 400px;
+  }
+
+  .pop_game_ob1 {
+    top: 290px;
+    left: 50px;
+  }
+
+  @keyframes moveOb3 {
+    0% {
+      bottom: 360px;
+    }
+
+    100% {
+      bottom: -200px;
+    }
+  }
+
+  .pop_game_ob3_1 {
+    right: 80px;
+  }
+
+  .pop_game_ob1_1 {
+    left: 70px;
+  }
+
+  .pop_game_pt1 {
+    left: 120px;
+  }
+
+  .pop_game_pt2 {
+    left: initial;
+    right: 130px;
+  }
+
+  .pop_game_pt3 {
+    right: 80px;
+    left: initial;
   }
 }
 
@@ -1388,6 +1576,126 @@ footer {
     border-radius: 46px;
     font-size: 14px;
   }
+
+  .pop_game_wrap_ballons_item_box_ballons {
+    width: 40px;
+  }
+
+  .pop_game_wrap_ballons_item_box_rating p {
+    font-size: 10px;
+    margin-left: 4px;
+  }
+
+  .pop_game_wrap_ballons_item_box_info {
+    padding: 8px 5px;
+    min-width: 40px;
+    height: 66px;
+  }
+
+  .pop_game_wrap_ballons_item_box_info div:nth-child(2) {
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 20px;
+    position: relative;
+    margin-top: 5px;
+  }
+
+  .high .pop_game_wrap_ballons_item_box_info div span {
+    top: 0px;
+    position: absolute;
+  }
+
+  .low .pop_game_wrap_ballons_item_box_info div span {
+    top: -5px;
+    position: absolute;
+  }
+
+  .pop_game_wrap_ballons_item_box_info div p {
+    margin-left: 0px;
+    font-size: 10px;
+  }
+
+  .pop_game_wrap_ballons_item {
+    height: 167px;
+  }
+
+  .pop_game_wrap {
+    height: calc(100vh - 32px);
+  }
+
+  .pop_game_ob3 {
+    bottom: 310px;
+    left: initial;
+    right: 20px;
+    transform: scale(.8);
+  }
+
+  .pop_game_ob2 {
+    top: 220px;
+    right: 20px;
+    transform: scale(.8);
+  }
+
+  .pop_game_ob1 {
+    top: 290px;
+    left: -40px;
+    transform: scale(.6);
+  }
+
+  .pop_game_countdown {
+    width: 60px;
+    height: 60px;
+    left: calc(50% - 30px);
+  }
+
+  .pop_game_countdown_box {
+    width: 56px;
+    height: 56px;
+  }
+
+  .pop_game_countdown_box img {
+    width: 10px;
+  }
+
+  .pop_game_countdown span {
+    font-size: 18px;
+    line-height: 18px;
+    margin: 0 3px;
+    -webkit-text-stroke: 1px #F2705C;
+    text-stroke: 1px #F2705C;
+  }
+
+  .pop_game_countdown.active {
+    transform: scale(.44);
+    left: calc(100% - 100px);
+    top: -5px;
+  }
+
+  .pop_game_countdown.active span {
+    font-size: 30px;
+  }
+
+  @keyframes moveOb3 {
+    0% {
+      bottom: 310px;
+    }
+
+    100% {
+      bottom: -200px;
+    }
+  }
+
+  .pop_game_ob1_1 {
+    left: -40px;
+  }
+
+  .pop_game_ob3_1 {
+    right: 30px;
+    transform: scale(.7);
+  }
+  .pop_game_ob3_1.active {
+    animation: moveOb3_1 20s ease-in-out forwards 9s;
+}
 }
 
 @media (max-width: 460px) {
