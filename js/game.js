@@ -52,26 +52,34 @@
   let counter = document.querySelector('.js_pop_game_countdown');
   let counterNum = document.querySelector('.js_pop_game_countdown_num');
 
-  
-  document.addEventListener('DOMContentLoaded', function () {
-      popGame.classList.add('active');
-      let deadLine = 5;
-      let timerId = null;
 
-      function countdownTimer() {
-        const diff = deadLine - 1;
-        if (diff <= 0) {
-          clearInterval(timerId);
-          draw();
-          counter.classList.add('active');
-          timerIdUp = setInterval(countUpTimer, 1000);
-        }
-        deadLine = diff;
-        counterNum.innerHTML = diff;
+  document.addEventListener('DOMContentLoaded', function () {
+    popGame.classList.add('active');
+    var audio = document.querySelector('.audio_game');
+
+    var a = audio;
+    if (a.autoplay) {
+      a.play();
+    }
+
+    console.log('yes')
+    let deadLine = 5;
+    let timerId = null;
+
+    function countdownTimer() {
+      const diff = deadLine - 1;
+      if (diff <= 0) {
+        clearInterval(timerId);
+        draw();
+        counter.classList.add('active');
+        timerIdUp = setInterval(countUpTimer, 1000);
       }
-      timerId = setInterval(countdownTimer, 1000);
-    })
-  
+      deadLine = diff;
+      counterNum.innerHTML = diff;
+    }
+    timerId = setInterval(countdownTimer, 1000);
+  })
+
 
   let earth = document.querySelector('.js_pop_game_earth');
   let oblako = document.querySelector('.js_pop_game_oblako');
@@ -101,7 +109,7 @@
   let deadLineUp = 0;
   let timerIdUp = null;
 
-  function countUpTimer(){
+  function countUpTimer() {
     const diff = deadLineUp + 1;
     if (diff >= 40) {
       console.log('1');
@@ -125,5 +133,11 @@
     moveId5 = setInterval(move5, 100);
 
   }
+
+})();
+
+(() => {
+
+
 
 })();
