@@ -106,7 +106,9 @@
     if (diff >= 40) {
       console.log('1');
       clearInterval(timerIdUp);
-
+      let sound = document.querySelector('.audio_game');
+      sound.currentTime = 0;
+      sound.pause();
     }
     deadLineUp = diff;
     counterNum.innerHTML = diff;
