@@ -56,13 +56,11 @@
   document.addEventListener('DOMContentLoaded', function () {
     popGame.classList.add('active');
     var audio = document.querySelector('.audio_game');
-
     var a = audio;
     if (a.autoplay) {
       a.play();
     }
 
-    console.log('yes')
     let deadLine = 5;
     let timerId = null;
 
@@ -108,15 +106,17 @@
 
   let deadLineUp = 0;
   let timerIdUp = null;
+  let win = document.querySelector('.pop_win');
 
   function countUpTimer() {
     const diff = deadLineUp + 1;
     if (diff >= 40) {
-      console.log('1');
       clearInterval(timerIdUp);
       let sound = document.querySelector('.audio_game');
       sound.currentTime = 0;
       sound.pause();
+      win.classList.add('active');
+      popGame.classList.add('filter');
     }
     deadLineUp = diff;
     counterNum.innerHTML = diff;
