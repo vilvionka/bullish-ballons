@@ -1453,6 +1453,194 @@ footer {
   align-items: center;
 }
 
+.tasks_header {
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.tasks_box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.tasks_box_item {
+  width: calc(50% - 12px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(180deg, #FFF7E5 0%, #E0CB9A 58.59%);
+  border: 1px solid #FFFFFF;
+  box-shadow: 4px 4px 24px 0px #A76F423D;
+  padding: 16px 24px;
+  height: 76px;
+  border-radius: 24px;
+}
+
+.tasks_box_item_body {
+  width: 100%;
+}
+
+.tasks_box_item_body p {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 16px;
+  text-align: left;
+  color: #553216A3;
+  margin-top: 8px;
+}
+
+.tasks_box_item_body span {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 20px;
+  text-align: left;
+  color: #553216;
+}
+
+.tasks_box_item i {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135.91deg, #FFF7E5 15.62%, #E0CB9A 55%);
+  border: 1px solid #FFFFFF7A;
+  box-shadow: 4px 4px 24px 0px #A76F423D;
+  margin-left: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transition: .3s;
+}
+
+.tasks_box_item i:hover {
+  background: #DECA9B;
+  box-shadow: 1px 1px 4px 0px #FFFFFF, 4px 4px 8px 0px #848484 inset;
+}
+
+.complete .tasks_box_item {
+  background: linear-gradient(0deg, #BEAF9E, #BEAF9E);
+}
+
+.complete .tasks_box_item i {
+  border: 1px solid #553216;
+  background: transparent;
+  opacity: .5;
+}
+
+.complete .tasks_box_item p,
+.complete .tasks_box_item span {
+  opacity: .5;
+}
+
+.faq_accordion {
+  margin-top: 56px;
+}
+
+.faq_accordion_item {
+  position: relative;
+  margin-left: 54px;
+  background: linear-gradient(180deg, #FFF7E5 0%, #E0CB9A 58.59%);
+  border: 1px solid #F0907C;
+  box-shadow: 4px 4px 24px 0px #A76F423D;
+  border-radius: 24px;
+  padding: 20px 24px;
+  margin-bottom: 16px;
+}
+
+.faq_accordion_item::after {
+  position: absolute;
+  content: '';
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #FFFFFF7A;
+  box-shadow: 4px 4px 24px 0px #A76F423D;
+  background: linear-gradient(135.91deg, #FFF7E5 15.62%, #E0CB9A 55%);
+  top: 12px;
+  right: 24px;
+  pointer-events: none;
+}
+
+.faq_accordion_item::before {
+  position: absolute;
+  content: '+';
+  display: block;
+  top: 17.5px;
+  right: 36px;
+  font-size: 30px;
+  line-height: 30px;
+  color: #553216;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.open.faq_accordion_item::before {
+  position: absolute;
+  content: '-';
+  display: block;
+  top: 15.5px;
+  right: 39px;
+  font-size: 30px;
+  line-height: 30px;
+  color: #553216;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.faq_accordion_item_header {
+  font-family: 'Titan One';
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: center;
+  width: 100%;
+  text-stroke: 1px #F66532;
+  -webkit-text-stroke: 1px #F66532;
+  color: #fff;
+  cursor: pointer;
+  padding-right: 48px;
+  padding-left: 24px;
+}
+
+.faq_accordion_item_header i {
+  font-family: 'Titan One';
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 48px;
+  text-align: center;
+  background-image: linear-gradient(180deg, #F68D2D 0%, #F33834 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 3px #FFFFFF;
+  text-stroke: 3px #FFFFFF;
+  text-transform: uppercase;
+  position: absolute;
+  top: 5px;
+  left: -54px;
+  font-style: normal;
+}
+
+.faq_accordion_item_body {
+  margin-top: 20px;
+  background: #DECA9B;
+  box-shadow: 0px 2px 8px 0px #A59485CC inset, 0px 2px 1px 0px #FFFFFFB8;
+  border-radius: 20px;
+  padding: 32px 24px 24px 24px;
+  color: #553216;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: center;
+
+}
+
+
 @media (max-width: 1170px) {
   .container {
     width: auto;
@@ -1822,6 +2010,14 @@ footer {
     height: 48px;
   }
 
+  .leader .main_wrap_bottom {
+    position: relative;
+    bottom: initial;
+    left: initial;
+    margin: 50px -15px 0 -15px;
+    width: calc(100% + 30px);
+  }
+
   .main_wrap_bottom_line {
     width: 1px;
     height: 20px;
@@ -1856,6 +2052,7 @@ footer {
     text-decoration: none;
     color: #553216;
     font-size: 16px;
+    text-align: center;
   }
 
   .main_wrap_detals {
@@ -1901,6 +2098,46 @@ footer {
   .pop_win_ura {
     width: 340px;
     top: 0px;
+  }
+
+  .tasks_header {
+    margin-top: 20px;
+    transform: scale(.6);
+    margin-bottom: 5px;
+  }
+
+  .tasks_box {
+    flex-direction: column;
+    margin-bottom: 0px;
+  }
+
+  .tasks_box_item {
+    margin-bottom: 12px;
+    width: 100%;
+    padding: 6px 12px;
+    height: 56px;
+  }
+
+  .tasks_box_item i {
+    width: 24px;
+    height: 24px;
+    margin-left: 6px;
+  }
+
+  .tasks_box_item i svg {
+    width: 17px;
+    height: 18px;
+  }
+
+  .tasks_box_item_body span {
+    font-size: 16px;
+    line-height: 100%;
+  }
+
+  .tasks_box_item_body p {
+    font-size: 12px;
+    line-height: 12px;
+    margin-top: 4px;
   }
 }
 
@@ -2246,6 +2483,59 @@ footer {
     top: 5px;
     right: 12px;
   }
+
+  .faq_accordion {
+    margin-top: 36px;
+  }
+
+  .faq_accordion_item_header i {
+    font-size: 28px;
+    line-height: 28px;
+    -webkit-text-stroke: 2px #FFFFFF;
+    text-stroke: 2px #FFFFFF;
+    top: 10px;
+    left: -30px;
+  }
+
+  .faq_accordion_item {
+    margin-left: 30px;
+    padding: 10px 12px;
+    margin-bottom: 8px;
+  }
+
+  .faq_accordion_item_header {
+    font-size: 18px;
+    line-height: 18px;
+    padding-right: 30px;
+    padding-left: 0px;
+  }
+  .faq_accordion_item::after {
+    width: 24px;
+    height: 24px;
+    top: 17px;
+    right: 12px;
+}
+.faq_accordion_item::before {
+  top: 19.5px;
+  right: 19px;
+  font-size: 20px;
+  line-height: 20px;
+}
+.open.faq_accordion_item::before {
+  top: 18.5px;
+  right: 21px;
+  font-size: 20px;
+  line-height: 20px;
+}
+.faq_accordion_item_body {
+  margin-top: 15px;
+  padding: 5px 12px 12px 12px;
+  font-size: 12px;
+  line-height: 20px;
+}
+.faq_accordion_item_body p{
+  margin-top: 16px;
+}
 }
 
 @media (max-width: 460px) {
@@ -2344,6 +2634,14 @@ footer {
 
   .leader_box {
     margin-top: 30px;
+  }
+
+  .tasks_box_item_body span {
+    font-size: 12px;
+  }
+
+  .tasks_box_item_body p {
+    font-size: 10px;
   }
 }
 
