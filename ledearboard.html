@@ -17,20 +17,6 @@
 </head>
 
 <body>
-  <audio autoplay="autoplay" class="audio_game">
-    <source src="./music/1.wav">
-    <source src="./music/1.mp3">
-    <source src="./music/1.aiff">
-    </audio>
-  <div class="pop_detals js_pop_detals">
-    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam,
-    eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
-    voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
-    voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci
-    velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem
-  </div>
-
- 
   <header>
     <div class="container">
       <div class="header_nav">
@@ -81,193 +67,365 @@
     </div>
   </header>
 
-  <section class="main">
+  <section class="leader">
     <div class="container">
-      <div class="main_subtittle">Welcome to the game</div>
-      <h1>NFT Bullish Balloons</h1>
-      <div class="main_wrap">
-        <div class="main_wrap_detals js_main_wrap_detals">
-          <svg width="4" height="13" viewBox="0 0 4 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M1.0001 12.3334H3.0001V4.66669H1.0001V12.3334ZM2.0001 2.38468C2.30521 2.38468 2.56098 2.28146 2.76743 2.07502C2.97387 1.86857 3.0771 1.6128 3.0771 1.30768C3.0771 1.00257 2.97387 0.746797 2.76743 0.540353C2.56098 0.33413 2.30521 0.231018 2.0001 0.231018C1.69498 0.231018 1.43921 0.33413 1.23276 0.540353C1.02632 0.746797 0.923096 1.00257 0.923096 1.30768C0.923096 1.6128 1.02632 1.86857 1.23276 2.07502C1.43921 2.28146 1.69498 2.38468 2.0001 2.38468Z"
-              fill="white" />
-          </svg>
+      <h1>lEADERS</h1>
+      <div class="leader_box">
+        <div class="leader_box_data">
+          <p>12.02.2024 - 24.02.2024</p>
+          <i><img src="./img/icon/calendar.png" alt="img"></i>
         </div>
-        <img class="main_wrap_cloud cloud1" src="./img/img/cloud-big.png" alt="img">
-        <img class="main_wrap_cloud cloud2" src="./img/img/cloud-left.png" alt="img">
-        <img class="main_wrap_cloud cloud3" src="./img/img/cloud_right.png" alt="img">
-        <div class="main_wrap_box">
-          <div class="main_wrap_box_sliderBallons">
-            <div class="main_wrap_box_sliderBallons_item">
-              <img class="img_anim" src="./img/img/sliderBallons/1.png" alt="img">
+        <div class="leader_box_checkbox_wrap">
+          <div class="leader_box_checkbox">
+            <div class="leader_box_checkbox_input">
+              <input type="radio" name="game" id="win" checked>
+              <label for="win"></label>
             </div>
-            <div class="main_wrap_box_sliderBallons_item">
-              <img class="img_anim" src="./img/img/sliderBallons/2.png" alt="img">
-            </div>
-            <div class="main_wrap_box_sliderBallons_item">
-              <img class="img_anim" src="./img/img/sliderBallons/3.png" alt="img">
-            </div>
-            <div class="main_wrap_box_sliderBallons_item">
-              <img class="img_anim" src="./img/img/sliderBallons/4.png" alt="img">
-            </div>
-            <div class="main_wrap_box_sliderBallons_item">
-              <img class="img_anim" src="./img/img/sliderBallons/5.png" alt="img">
-            </div>
+            <span>Win</span>
           </div>
-          <div class="main_wrap_box_sliderBallons_nav">
-            <div class="main_wrap_box_sliderBallons_nav_prev">
-              <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M3.05381 6L7.65381 10.6L6.60006 11.6537L0.946309 6L6.60006 0.346247L7.65381 1.4L3.05381 6Z"
-                  fill="#553216" />
-              </svg>
+          <div class="leader_box_checkbox">
+            <div class="leader_box_checkbox_input">
+              <input type="radio" name="game" id="loss">
+              <label for="loos"></label>
             </div>
-            <div class="main_wrap_box_sliderBallons_nav_next">
-              <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M4.94619 6L0.346191 10.6L1.39994 11.6537L7.05369 6L1.39994 0.346247L0.346191 1.4L4.94619 6Z"
-                  fill="#553216" />
-              </svg>
-            </div>
+            <span>Loss</span>
           </div>
-          <div class="main_wrap_box_sliderCoin">
-            <div class="main_wrap_box_sliderCoin_item">
-              <div class="main_wrap_box_sliderCoin_item_box">
-                <img class="coin_anim" src="./img/icon/crystals.svg" alt="">
-                <div class="main_wrap_box_sliderCoin_item_box_info">
-                  <p>1000</p>
-                  <svg width="21" height="15" viewBox="0 0 21 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M13.5015 15C11.4082 15 9.63458 14.2736 8.18075 12.8207C6.72692 11.3679 6 9.59483 6 7.5015C6 5.40817 6.72642 3.63458 8.17925 2.18075C9.63208 0.726916 11.4052 0 13.4985 0C15.5918 0 17.3654 0.726416 18.8193 2.17925C20.2731 3.63208 21 5.40517 21 7.4985C21 9.59183 20.2736 11.3654 18.8208 12.8193C17.3679 14.2731 15.5948 15 13.5015 15ZM5.5 14.7308C3.8615 14.2961 2.53525 13.4086 1.52125 12.0683C0.507083 10.7279 0 9.20517 0 7.5C0 5.79483 0.507083 4.27208 1.52125 2.93175C2.53525 1.59142 3.8615 0.703917 5.5 0.26925V1.85C4.3 2.26667 3.33333 2.99167 2.6 4.025C1.86667 5.05833 1.5 6.21667 1.5 7.5C1.5 8.78333 1.86667 9.94167 2.6 10.975C3.33333 12.0083 4.3 12.7333 5.5 13.15V14.7308Z"
-                      fill="#FAFF05" />
-                  </svg>
-                </div>
-              </div>
-            </div>
-            <div class="main_wrap_box_sliderCoin_item">
-              <div class="main_wrap_box_sliderCoin_item_box">
-                <img class="coin_anim" src="./img/icon/crystals.svg" alt="">
-                <div class="main_wrap_box_sliderCoin_item_box_info">
-                  <p>1000</p>
-                  <svg width="21" height="15" viewBox="0 0 21 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M13.5015 15C11.4082 15 9.63458 14.2736 8.18075 12.8207C6.72692 11.3679 6 9.59483 6 7.5015C6 5.40817 6.72642 3.63458 8.17925 2.18075C9.63208 0.726916 11.4052 0 13.4985 0C15.5918 0 17.3654 0.726416 18.8193 2.17925C20.2731 3.63208 21 5.40517 21 7.4985C21 9.59183 20.2736 11.3654 18.8208 12.8193C17.3679 14.2731 15.5948 15 13.5015 15ZM5.5 14.7308C3.8615 14.2961 2.53525 13.4086 1.52125 12.0683C0.507083 10.7279 0 9.20517 0 7.5C0 5.79483 0.507083 4.27208 1.52125 2.93175C2.53525 1.59142 3.8615 0.703917 5.5 0.26925V1.85C4.3 2.26667 3.33333 2.99167 2.6 4.025C1.86667 5.05833 1.5 6.21667 1.5 7.5C1.5 8.78333 1.86667 9.94167 2.6 10.975C3.33333 12.0083 4.3 12.7333 5.5 13.15V14.7308Z"
-                      fill="#FAFF05" />
-                  </svg>
-                </div>
-              </div>
-            </div>
-            <div class="main_wrap_box_sliderCoin_item">
-              <div class="main_wrap_box_sliderCoin_item_box">
-                <img class="coin_anim" src="./img/icon/crystals.svg" alt="">
-                <div class="main_wrap_box_sliderCoin_item_box_info">
-                  <p>1000</p>
-                  <svg width="21" height="15" viewBox="0 0 21 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M13.5015 15C11.4082 15 9.63458 14.2736 8.18075 12.8207C6.72692 11.3679 6 9.59483 6 7.5015C6 5.40817 6.72642 3.63458 8.17925 2.18075C9.63208 0.726916 11.4052 0 13.4985 0C15.5918 0 17.3654 0.726416 18.8193 2.17925C20.2731 3.63208 21 5.40517 21 7.4985C21 9.59183 20.2736 11.3654 18.8208 12.8193C17.3679 14.2731 15.5948 15 13.5015 15ZM5.5 14.7308C3.8615 14.2961 2.53525 13.4086 1.52125 12.0683C0.507083 10.7279 0 9.20517 0 7.5C0 5.79483 0.507083 4.27208 1.52125 2.93175C2.53525 1.59142 3.8615 0.703917 5.5 0.26925V1.85C4.3 2.26667 3.33333 2.99167 2.6 4.025C1.86667 5.05833 1.5 6.21667 1.5 7.5C1.5 8.78333 1.86667 9.94167 2.6 10.975C3.33333 12.0083 4.3 12.7333 5.5 13.15V14.7308Z"
-                      fill="#FAFF05" />
-                  </svg>
-                </div>
-              </div>
-            </div>
-            <div class="main_wrap_box_sliderCoin_item">
-              <div class="main_wrap_box_sliderCoin_item_box">
-                <img class="coin_anim" src="./img/icon/crystals.svg" alt="">
-                <div class="main_wrap_box_sliderCoin_item_box_info">
-                  <p>1000</p>
-                  <svg width="21" height="15" viewBox="0 0 21 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M13.5015 15C11.4082 15 9.63458 14.2736 8.18075 12.8207C6.72692 11.3679 6 9.59483 6 7.5015C6 5.40817 6.72642 3.63458 8.17925 2.18075C9.63208 0.726916 11.4052 0 13.4985 0C15.5918 0 17.3654 0.726416 18.8193 2.17925C20.2731 3.63208 21 5.40517 21 7.4985C21 9.59183 20.2736 11.3654 18.8208 12.8193C17.3679 14.2731 15.5948 15 13.5015 15ZM5.5 14.7308C3.8615 14.2961 2.53525 13.4086 1.52125 12.0683C0.507083 10.7279 0 9.20517 0 7.5C0 5.79483 0.507083 4.27208 1.52125 2.93175C2.53525 1.59142 3.8615 0.703917 5.5 0.26925V1.85C4.3 2.26667 3.33333 2.99167 2.6 4.025C1.86667 5.05833 1.5 6.21667 1.5 7.5C1.5 8.78333 1.86667 9.94167 2.6 10.975C3.33333 12.0083 4.3 12.7333 5.5 13.15V14.7308Z"
-                      fill="#FAFF05" />
-                  </svg>
-                </div>
-              </div>
-            </div>
-            <div class="main_wrap_box_sliderCoin_item">
-              <div class="main_wrap_box_sliderCoin_item_box">
-                <img class="coin_anim" src="./img/icon/crystals.svg" alt="">
-                <div class="main_wrap_box_sliderCoin_item_box_info">
-                  <p>1000</p>
-                  <svg width="21" height="15" viewBox="0 0 21 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M13.5015 15C11.4082 15 9.63458 14.2736 8.18075 12.8207C6.72692 11.3679 6 9.59483 6 7.5015C6 5.40817 6.72642 3.63458 8.17925 2.18075C9.63208 0.726916 11.4052 0 13.4985 0C15.5918 0 17.3654 0.726416 18.8193 2.17925C20.2731 3.63208 21 5.40517 21 7.4985C21 9.59183 20.2736 11.3654 18.8208 12.8193C17.3679 14.2731 15.5948 15 13.5015 15ZM5.5 14.7308C3.8615 14.2961 2.53525 13.4086 1.52125 12.0683C0.507083 10.7279 0 9.20517 0 7.5C0 5.79483 0.507083 4.27208 1.52125 2.93175C2.53525 1.59142 3.8615 0.703917 5.5 0.26925V1.85C4.3 2.26667 3.33333 2.99167 2.6 4.025C1.86667 5.05833 1.5 6.21667 1.5 7.5C1.5 8.78333 1.86667 9.94167 2.6 10.975C3.33333 12.0083 4.3 12.7333 5.5 13.15V14.7308Z"
-                      fill="#FAFF05" />
-                  </svg>
-                </div>
-              </div>
-            </div>
-            <div class="main_wrap_box_sliderCoin_item">
-              <div class="main_wrap_box_sliderCoin_item_box">
-                <img class="coin_anim" src="./img/icon/crystals.svg" alt="">
-                <div class="main_wrap_box_sliderCoin_item_box_info">
-                  <p>1000</p>
-                  <svg width="21" height="15" viewBox="0 0 21 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M13.5015 15C11.4082 15 9.63458 14.2736 8.18075 12.8207C6.72692 11.3679 6 9.59483 6 7.5015C6 5.40817 6.72642 3.63458 8.17925 2.18075C9.63208 0.726916 11.4052 0 13.4985 0C15.5918 0 17.3654 0.726416 18.8193 2.17925C20.2731 3.63208 21 5.40517 21 7.4985C21 9.59183 20.2736 11.3654 18.8208 12.8193C17.3679 14.2731 15.5948 15 13.5015 15ZM5.5 14.7308C3.8615 14.2961 2.53525 13.4086 1.52125 12.0683C0.507083 10.7279 0 9.20517 0 7.5C0 5.79483 0.507083 4.27208 1.52125 2.93175C2.53525 1.59142 3.8615 0.703917 5.5 0.26925V1.85C4.3 2.26667 3.33333 2.99167 2.6 4.025C1.86667 5.05833 1.5 6.21667 1.5 7.5C1.5 8.78333 1.86667 9.94167 2.6 10.975C3.33333 12.0083 4.3 12.7333 5.5 13.15V14.7308Z"
-                      fill="#FAFF05" />
-                  </svg>
-                </div>
-              </div>
-            </div>
-            <div class="main_wrap_box_sliderCoin_item">
-              <div class="main_wrap_box_sliderCoin_item_box">
-                <img class="coin_anim" src="./img/icon/crystals.svg" alt="">
-                <div class="main_wrap_box_sliderCoin_item_box_info">
-                  <p>1000</p>
-                  <svg width="21" height="15" viewBox="0 0 21 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M13.5015 15C11.4082 15 9.63458 14.2736 8.18075 12.8207C6.72692 11.3679 6 9.59483 6 7.5015C6 5.40817 6.72642 3.63458 8.17925 2.18075C9.63208 0.726916 11.4052 0 13.4985 0C15.5918 0 17.3654 0.726416 18.8193 2.17925C20.2731 3.63208 21 5.40517 21 7.4985C21 9.59183 20.2736 11.3654 18.8208 12.8193C17.3679 14.2731 15.5948 15 13.5015 15ZM5.5 14.7308C3.8615 14.2961 2.53525 13.4086 1.52125 12.0683C0.507083 10.7279 0 9.20517 0 7.5C0 5.79483 0.507083 4.27208 1.52125 2.93175C2.53525 1.59142 3.8615 0.703917 5.5 0.26925V1.85C4.3 2.26667 3.33333 2.99167 2.6 4.025C1.86667 5.05833 1.5 6.21667 1.5 7.5C1.5 8.78333 1.86667 9.94167 2.6 10.975C3.33333 12.0083 4.3 12.7333 5.5 13.15V14.7308Z"
-                      fill="#FAFF05" />
-                  </svg>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="main_wrap_box_sliderCoin_nav">
-            <div class="main_wrap_box_sliderCoin_nav_prev">
-              <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M3.05381 6L7.65381 10.6L6.60006 11.6537L0.946309 6L6.60006 0.346247L7.65381 1.4L3.05381 6Z"
-                  fill="#553216" />
-              </svg>
-            </div>
-            <div class="main_wrap_box_sliderCoin_nav_next">
-              <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M4.94619 6L0.346191 10.6L1.39994 11.6537L7.05369 6L1.39994 0.346247L0.346191 1.4L4.94619 6Z"
-                  fill="#553216" />
-              </svg>
-            </div>
-          </div>
-        </div>
-        <div class="main_wrap_bg_box">
-          <img class="main_wrap_bg" src="./img/img/bg_main.png" alt="img">
         </div>
       </div>
-      <a href="./game.html" class="main_race">
-        <img src="./img/icon/race.svg" alt="icon">
-        <span>Race</span>
-      </a>
-      <div class="main_partners">
-        <img src="./img/icon/hader.svg" alt="icon">
-        <div class="main_partners_box">
-          <a href="#"><img src="./img/img/logo1.png" alt="img"></a>
-          <a href="#"><img src="./img/img/logo2.png" alt="img"></a>
-          <a href="#"><img src="./img/img/logo3.png" alt="img"></a>
-          <a href="#"><img src="./img/img/logo4.png" alt="img"></a>
-          <a href="#"><img src="./img/img/logo4.png" alt="img"></a>
-          <a href="#"><img src="./img/img/logo3.png" alt="img"></a>
-          <a href="#"><img src="./img/img/logo2.png" alt="img"></a>
-          <a href="#"><img src="./img/img/logo1.png" alt="img"></a>
+      <div class="leader_wrap">
+        <div class="leader_wrap_item">
+          <div class="leader_wrap_item_box">
+            <div class="leader_wrap_item_box_avatar">
+              <img src="./img/img/avatar/2.png" alt="img">
+            </div>
+            <div class="leader_wrap_item_box_data">
+              <span>Emily Higgins</span>
+              <div class="header_nav_right_user_info_line">
+                <p>LVL 10</p>
+              </div>
+            </div>
+
+            <div class="leader_wrap_item_box_total loss">
+              -1000 TON
+            </div>
+          </div>
+          <div class="leader_wrap_item_center">
+            vs
+          </div>
+          <div class="leader_wrap_item_box">
+            <div class="leader_wrap_item_box_total win">
+              +1000 TON
+            </div>
+            <div class="leader_wrap_item_box_range">
+              <img src="./img/icon/range.png" alt="icon">
+            </div>
+            <div class="leader_wrap_item_box_data">
+              <span>Emily Higgins</span>
+              <div class="header_nav_right_user_info_line">
+                <p>LVL 10</p>
+              </div>
+            </div>
+            <div class="leader_wrap_item_box_avatar">
+              <img src="./img/img/avatar/2.png" alt="img">
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="main_wrap_bottom">
-        <a href="#">Tasks</a>
-        <div class="main_wrap_bottom_line"></div>
-        <a href="#">History</a>
-        <a href="./game.html" class="main_wrap_bottom_button">
-          <img src="./img/icon/race.svg" alt="icon">
-          <span>Race</span>
-        </a>
-        <a href="./ledearboard.html">Leaders</a>
-        <div class="main_wrap_bottom_line"></div>
-        <a href="#">Rules</a>
+        <div class="leader_wrap_item">
+          <div class="leader_wrap_item_box">
+            <div class="leader_wrap_item_box_avatar">
+              <img src="./img/img/avatar/2.png" alt="img">
+            </div>
+            <div class="leader_wrap_item_box_data">
+              <span>Emily Higgins</span>
+              <div class="header_nav_right_user_info_line">
+                <p>LVL 10</p>
+              </div>
+            </div>
+
+            <div class="leader_wrap_item_box_total loss">
+              -1000 TON
+            </div>
+          </div>
+          <div class="leader_wrap_item_center">
+            vs
+          </div>
+          <div class="leader_wrap_item_box">
+            <div class="leader_wrap_item_box_total win">
+              +1000 TON
+            </div>
+            <div class="leader_wrap_item_box_range">
+              <img src="./img/icon/range.png" alt="icon">
+            </div>
+            <div class="leader_wrap_item_box_data">
+              <span>Emily Higgins</span>
+              <div class="header_nav_right_user_info_line">
+                <p>LVL 10</p>
+              </div>
+            </div>
+            <div class="leader_wrap_item_box_avatar">
+              <img src="./img/img/avatar/2.png" alt="img">
+            </div>
+          </div>
+        </div>
+        <div class="leader_wrap_item">
+          <div class="leader_wrap_item_box">
+            <div class="leader_wrap_item_box_avatar">
+              <img src="./img/img/avatar/2.png" alt="img">
+            </div>
+            <div class="leader_wrap_item_box_data">
+              <span>Emily Higgins</span>
+              <div class="header_nav_right_user_info_line">
+                <p>LVL 10</p>
+              </div>
+            </div>
+
+            <div class="leader_wrap_item_box_total loss">
+              -1000 TON
+            </div>
+          </div>
+          <div class="leader_wrap_item_center">
+            vs
+          </div>
+          <div class="leader_wrap_item_box">
+            <div class="leader_wrap_item_box_total win">
+              +1000 TON
+            </div>
+            <div class="leader_wrap_item_box_range">
+              <img src="./img/icon/range.png" alt="icon">
+            </div>
+            <div class="leader_wrap_item_box_data">
+              <span>Emily Higgins</span>
+              <div class="header_nav_right_user_info_line">
+                <p>LVL 10</p>
+              </div>
+            </div>
+            <div class="leader_wrap_item_box_avatar">
+              <img src="./img/img/avatar/2.png" alt="img">
+            </div>
+          </div>
+        </div>
+        <div class="leader_wrap_item">
+          <div class="leader_wrap_item_box">
+            <div class="leader_wrap_item_box_avatar">
+              <img src="./img/img/avatar/2.png" alt="img">
+            </div>
+            <div class="leader_wrap_item_box_data">
+              <span>Emily Higgins</span>
+              <div class="header_nav_right_user_info_line">
+                <p>LVL 10</p>
+              </div>
+            </div>
+
+            <div class="leader_wrap_item_box_total loss">
+              -1000 TON
+            </div>
+          </div>
+          <div class="leader_wrap_item_center">
+            vs
+          </div>
+          <div class="leader_wrap_item_box">
+            <div class="leader_wrap_item_box_total win">
+              +1000 TON
+            </div>
+            <div class="leader_wrap_item_box_range">
+              <img src="./img/icon/range.png" alt="icon">
+            </div>
+            <div class="leader_wrap_item_box_data">
+              <span>Emily Higgins</span>
+              <div class="header_nav_right_user_info_line">
+                <p>LVL 10</p>
+              </div>
+            </div>
+            <div class="leader_wrap_item_box_avatar">
+              <img src="./img/img/avatar/2.png" alt="img">
+            </div>
+          </div>
+        </div>
+        <div class="leader_wrap_item">
+          <div class="leader_wrap_item_box">
+            <div class="leader_wrap_item_box_avatar">
+              <img src="./img/img/avatar/2.png" alt="img">
+            </div>
+            <div class="leader_wrap_item_box_data">
+              <span>Emily Higgins</span>
+              <div class="header_nav_right_user_info_line">
+                <p>LVL 10</p>
+              </div>
+            </div>
+
+            <div class="leader_wrap_item_box_total loss">
+              -1000 TON
+            </div>
+          </div>
+          <div class="leader_wrap_item_center">
+            vs
+          </div>
+          <div class="leader_wrap_item_box">
+            <div class="leader_wrap_item_box_total win">
+              +1000 TON
+            </div>
+            <div class="leader_wrap_item_box_range">
+              <img src="./img/icon/range.png" alt="icon">
+            </div>
+            <div class="leader_wrap_item_box_data">
+              <span>Emily Higgins</span>
+              <div class="header_nav_right_user_info_line">
+                <p>LVL 10</p>
+              </div>
+            </div>
+            <div class="leader_wrap_item_box_avatar">
+              <img src="./img/img/avatar/2.png" alt="img">
+            </div>
+          </div>
+        </div>
+        <div class="leader_wrap_item">
+          <div class="leader_wrap_item_box">
+            <div class="leader_wrap_item_box_avatar">
+              <img src="./img/img/avatar/2.png" alt="img">
+            </div>
+            <div class="leader_wrap_item_box_data">
+              <span>Emily Higgins</span>
+              <div class="header_nav_right_user_info_line">
+                <p>LVL 10</p>
+              </div>
+            </div>
+
+            <div class="leader_wrap_item_box_total loss">
+              -1000 TON
+            </div>
+          </div>
+          <div class="leader_wrap_item_center">
+            vs
+          </div>
+          <div class="leader_wrap_item_box">
+            <div class="leader_wrap_item_box_total win">
+              +1000 TON
+            </div>
+            <div class="leader_wrap_item_box_range">
+              <img src="./img/icon/range.png" alt="icon">
+            </div>
+            <div class="leader_wrap_item_box_data">
+              <span>Emily Higgins</span>
+              <div class="header_nav_right_user_info_line">
+                <p>LVL 10</p>
+              </div>
+            </div>
+            <div class="leader_wrap_item_box_avatar">
+              <img src="./img/img/avatar/2.png" alt="img">
+            </div>
+          </div>
+        </div>
+        <div class="leader_wrap_item">
+          <div class="leader_wrap_item_box">
+            <div class="leader_wrap_item_box_avatar">
+              <img src="./img/img/avatar/2.png" alt="img">
+            </div>
+            <div class="leader_wrap_item_box_data">
+              <span>Emily Higgins</span>
+              <div class="header_nav_right_user_info_line">
+                <p>LVL 10</p>
+              </div>
+            </div>
+
+            <div class="leader_wrap_item_box_total loss">
+              -1000 TON
+            </div>
+          </div>
+          <div class="leader_wrap_item_center">
+            vs
+          </div>
+          <div class="leader_wrap_item_box">
+            <div class="leader_wrap_item_box_total win">
+              +1000 TON
+            </div>
+            <div class="leader_wrap_item_box_range">
+              <img src="./img/icon/range.png" alt="icon">
+            </div>
+            <div class="leader_wrap_item_box_data">
+              <span>Emily Higgins</span>
+              <div class="header_nav_right_user_info_line">
+                <p>LVL 10</p>
+              </div>
+            </div>
+            <div class="leader_wrap_item_box_avatar">
+              <img src="./img/img/avatar/2.png" alt="img">
+            </div>
+          </div>
+        </div>
+        <div class="leader_wrap_item">
+          <div class="leader_wrap_item_box">
+            <div class="leader_wrap_item_box_avatar">
+              <img src="./img/img/avatar/2.png" alt="img">
+            </div>
+            <div class="leader_wrap_item_box_data">
+              <span>Emily Higgins</span>
+              <div class="header_nav_right_user_info_line">
+                <p>LVL 10</p>
+              </div>
+            </div>
+
+            <div class="leader_wrap_item_box_total loss">
+              -1000 TON
+            </div>
+          </div>
+          <div class="leader_wrap_item_center">
+            vs
+          </div>
+          <div class="leader_wrap_item_box">
+            <div class="leader_wrap_item_box_total win">
+              +1000 TON
+            </div>
+            <div class="leader_wrap_item_box_range">
+              <img src="./img/icon/range.png" alt="icon">
+            </div>
+            <div class="leader_wrap_item_box_data">
+              <span>Emily Higgins</span>
+              <div class="header_nav_right_user_info_line">
+                <p>LVL 10</p>
+              </div>
+            </div>
+            <div class="leader_wrap_item_box_avatar">
+              <img src="./img/img/avatar/2.png" alt="img">
+            </div>
+          </div>
+        </div>
+        <div class="leader_wrap_item">
+          <div class="leader_wrap_item_box">
+            <div class="leader_wrap_item_box_avatar">
+              <img src="./img/img/avatar/2.png" alt="img">
+            </div>
+            <div class="leader_wrap_item_box_data">
+              <span>Emily Higgins</span>
+              <div class="header_nav_right_user_info_line">
+                <p>LVL 10</p>
+              </div>
+            </div>
+
+            <div class="leader_wrap_item_box_total loss">
+              -1000 TON
+            </div>
+          </div>
+          <div class="leader_wrap_item_center">
+            vs
+          </div>
+          <div class="leader_wrap_item_box">
+            <div class="leader_wrap_item_box_total win">
+              +1000 TON
+            </div>
+            <div class="leader_wrap_item_box_range">
+              <img src="./img/icon/range.png" alt="icon">
+            </div>
+            <div class="leader_wrap_item_box_data">
+              <span>Emily Higgins</span>
+              <div class="header_nav_right_user_info_line">
+                <p>LVL 10</p>
+              </div>
+            </div>
+            <div class="leader_wrap_item_box_avatar">
+              <img src="./img/img/avatar/2.png" alt="img">
+            </div>
+          </div>
+        </div>
       </div>
 
     </div>

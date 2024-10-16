@@ -89,6 +89,7 @@
   let ob2 = document.querySelector('.js_pop_game_ob2');
   let ob3 = document.querySelector('.js_pop_game_ob3');
   let ob3_1 = document.querySelector('.js_pop_game_ob3_1');
+  let ob4_1 = document.querySelector('.js_pop_game_ob4_1');
 
   function draw() {
     earth.classList.add('active');
@@ -101,6 +102,7 @@
     ob2.classList.add('active');
     ob3.classList.add('active');
     ob3_1.classList.add('active');
+    ob4_1.classList.add('active');
     moveBallons();
   }
 
@@ -110,7 +112,7 @@
 
   function countUpTimer() {
     const diff = deadLineUp + 1;
-    if (diff >= 40) {
+    if (diff >= 60) {
       clearInterval(timerIdUp);
       let sound = document.querySelector('.audio_game');
       sound.currentTime = 0;
@@ -126,11 +128,11 @@
 
 
   function moveBallons() {
-    moveId1 = setInterval(move1, 85);
-    moveId2 = setInterval(move2, 77);
-    moveId3 = setInterval(move3, 80);
-    moveId4 = setInterval(move4, 90);
-    moveId5 = setInterval(move5, 100);
+    moveId1 = setInterval(move1, 135);
+    moveId2 = setInterval(move2, 125);
+    moveId3 = setInterval(move3, 150);
+    moveId4 = setInterval(move4, 160);
+    moveId5 = setInterval(move5, 140);
 
   }
 
