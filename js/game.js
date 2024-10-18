@@ -4,7 +4,7 @@
   let moveId1 = null;
   function move1() {
     bDiff1 = bDiff1 + 1;
-    if (bDiff1 >= 380) {
+    if (bDiff1 >= dl) {
       clearInterval(moveId1);
     }
     document.querySelector('#moved1').style.bottom = bDiff1 + 'px';
@@ -13,7 +13,7 @@
   let moveId2 = null;
   function move2() {
     bDiff2 = bDiff2 + 1;
-    if (bDiff2 >= 380) {
+    if (bDiff2 >= dl) {
       clearInterval(moveId2);
     }
     document.querySelector('#moved2').style.bottom = bDiff2 + 'px';
@@ -22,7 +22,7 @@
   let moveId3 = null;
   function move3() {
     bDiff3 = bDiff3 + 1;
-    if (bDiff3 >= 380) {
+    if (bDiff3 >= dl) {
       clearInterval(moveId3);
     }
     document.querySelector('#moved3').style.bottom = bDiff3 + 'px';
@@ -31,7 +31,7 @@
   let moveId4 = null;
   function move4() {
     bDiff4 = bDiff4 + 1;
-    if (bDiff4 >= 380) {
+    if (bDiff4 >= dl) {
       clearInterval(moveId4);
     }
     document.querySelector('#moved4').style.bottom = bDiff4 + 'px';
@@ -40,7 +40,7 @@
   let moveId5 = null;
   function move5() {
     bDiff5 = bDiff5 + 1;
-    if (bDiff5 >= 380) {
+    if (bDiff5 >= dl) {
       clearInterval(moveId5);
     }
     document.querySelector('#moved5').style.bottom = bDiff5 + 'px';
@@ -57,9 +57,6 @@
     popGame.classList.add('active');
     var audio = document.querySelector('.audio_game');
     var a = audio;
-    if (a.autoplay) {
-      a.play();
-    }
 
     let deadLine = 5;
     let timerId = null;
@@ -67,8 +64,10 @@
     function countdownTimer() {
       const diff = deadLine - 1;
       if (diff <= 0) {
+        dlina();
         clearInterval(timerId);
         draw();
+
         counter.classList.add('active');
         timerIdUp = setInterval(countUpTimer, 1000);
       }
@@ -76,6 +75,8 @@
       counterNum.innerHTML = diff;
     }
     timerId = setInterval(countdownTimer, 1000);
+
+    
   })
 
 
@@ -128,18 +129,29 @@
 
 
   function moveBallons() {
-    moveId1 = setInterval(move1, 135);
-    moveId2 = setInterval(move2, 125);
-    moveId3 = setInterval(move3, 150);
-    moveId4 = setInterval(move4, 160);
-    moveId5 = setInterval(move5, 140);
+    moveId1 = setInterval(move1, x );
+     x = x - 10;
+    moveId2 = setInterval(move2, x);
+    x = x + 5;
+    moveId3 = setInterval(move3, x);
+    x = x - 7;
+    moveId4 = setInterval(move4, x);
+    x = x - 5;
+    moveId5 = setInterval(move5, x);
 
   }
 
+ 
+  let dl = 380;
+  let x = null;
+  function dlina(){
+    let box = document.querySelector('.js_pop_game_wrap').offsetHeight;
+    let avatar = document.querySelector('.pop_game_wrap_avatar').offsetHeight;
+    let ballons = document.querySelector('.pop_game_wrap_ballons').offsetHeight;
+    dl = box - avatar - ballons - 70;
+    x = 1000 / (dl/60);
+  }
+
+
 })();
 
-(() => {
-
-
-
-})();
