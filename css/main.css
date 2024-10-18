@@ -10,6 +10,10 @@ body {
   font-weight: 500;
 }
 
+input {
+  outline: none;
+}
+
 a {
   text-decoration: none;
   color: transparent;
@@ -1859,6 +1863,118 @@ footer {
   object-fit: cover;
 }
 
+.pop_up {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 19;
+  background: linear-gradient(180deg, #FFF7E5 0%, #E0CB9A 58.59%);
+  border-radius: 32px;
+  border: 1px solid #FFFFFF;
+  box-shadow: 4px 4px 24px 0px #A76F423D;
+  padding: 0 36px 36px 36px;
+  min-width: 280px;
+  max-width: 480px;
+  display: none;
+}
+.pop_up.active{
+  display: block;
+}
+
+.pop_up_head {
+  background: linear-gradient(180deg, #FFF7E5 0%, #E0CB9A 58.59%);
+  border: 1px solid #FFFFFF;
+  box-shadow: 4px 4px 24px 0px #A76F423D;
+  border-radius: 48px;
+  width: calc(100% - 72px);
+  position: absolute;
+  top: -24px;
+  left: 36px;
+  font-family: 'Titan One';
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 48px;
+  text-align: center;
+  color: #553216;
+  height: 48px;
+  text-stroke: 0.5px #Fff;
+  -webkit-text-stroke: 0.5px #Fff;
+}
+
+.pop_up_head_body_headling {
+  margin-top: 48px;
+  font-family: 'Titan One';
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: center;
+  color: #fff;
+  text-stroke: 1.5px #f66532;
+  -webkit-text-stroke: 1.5px #f66532;
+  margin-bottom: 20px;
+}
+
+.pop_up_head_body_input {
+  position: relative;
+  width: 100%;
+  height: 40px;
+  background: #DECA9B;
+  box-shadow: 0px 2px 8px 0px #A59485CC inset, 0px 2px 1px 0px #FFFFFFB8;
+  border-radius: 20px;
+}
+
+.pop_up_head_body_input input {
+  width: 100%;
+  height: 40px;
+  border: none;
+  background: transparent;
+  padding: 0 60px 0 16px;
+}
+
+.pop_up_head_body_input_box {
+  position: absolute;
+  top: 8px;
+  right: 36px;
+  cursor: pointer;
+}
+
+.pop_up_head_body_input_box_wrap {
+  display: none;
+}
+
+.pop_up_head_body_input_box_coin img {
+  width: 24px;
+  height: 24px;
+}
+
+.pop_up_head_body_input_box_coin {
+  position: relative;
+}
+
+.pop_up_head_body_input_box_coin::after {
+  content: '';
+  width: 9px;
+  height: 4.5px;
+  display: block;
+  background-image: url(../img/icon/pop_up_down.png);
+  background-position: center;
+  right: -17px;
+  top: 10px;
+  position: absolute;
+}
+
+.pop_up_head_body_submit {
+  margin-top: 45px;
+  width: 100%;
+  height: 40px;
+  border-radius: 72px;
+  cursor: pointer;
+  background: linear-gradient(180deg, #FCBD3F 0%, #F23B34 70.6%);
+  border: 1px solid #FFFFFF;
+  box-shadow: 4px 4px 24px 0px #00000029;
+}
+
 
 @media (max-width: 1170px) {
   .container {
@@ -2982,6 +3098,15 @@ footer {
   .tasks_box_item_body p {
     font-size: 10px;
   }
+  .pop_up {
+    padding: 0 24px 24px 24px;
+    min-width: 280px;
+    max-width: 280px;
+}
+.pop_up_head {
+  width: calc(100% - 48px);
+  left: 24px;
+}
 
 }
 
