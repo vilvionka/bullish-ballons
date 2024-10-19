@@ -76,7 +76,7 @@
     }
     timerId = setInterval(countdownTimer, 1000);
 
-    
+
   })
 
 
@@ -129,8 +129,8 @@
 
 
   function moveBallons() {
-    moveId1 = setInterval(move1, x );
-     x = x - 10;
+    moveId1 = setInterval(move1, x);
+    x = x - 10;
     moveId2 = setInterval(move2, x);
     x = x + 5;
     moveId3 = setInterval(move3, x);
@@ -141,17 +141,35 @@
 
   }
 
- 
+
   let dl = 380;
   let x = null;
-  function dlina(){
+  function dlina() {
     let box = document.querySelector('.js_pop_game_wrap').offsetHeight;
     let avatar = document.querySelector('.pop_game_wrap_avatar').offsetHeight;
     let ballons = document.querySelector('.pop_game_wrap_ballons').offsetHeight;
     dl = box - avatar - ballons - 70;
-    x = 1000 / (dl/60);
+    x = 1000 / (dl / 60);
   }
 
 
 })();
 
+(() => {
+  document.addEventListener('DOMContentLoaded', function () {
+    let earth = document.querySelector('.js_pop_game_earth_img');
+
+    function changeFoto() {
+      if (window.innerWidth < 600) {
+        earth.src = './img/img/bg_game_modal/earth_mobile.png';
+      } else {
+        earth.src = './img/img/bg_game_modal/earth.png';
+      }
+    }
+    changeFoto();
+    window.addEventListener('resize', () => {
+      changeFoto();
+    });
+  })
+
+})();

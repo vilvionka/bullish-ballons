@@ -817,11 +817,11 @@ footer {
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
-  height: 537px;
-  background-image: url(../img/img/bg_game_modal/earth.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  height: auto;
+}
+
+.pop_game_earth img {
+  width: 100%;
 }
 
 .pop_game_oblako {
@@ -1878,7 +1878,8 @@ footer {
   max-width: 480px;
   display: none;
 }
-.pop_up.active{
+
+.pop_up.active {
   display: block;
 }
 
@@ -1941,6 +1942,9 @@ footer {
 
 .pop_up_head_body_input_box_wrap {
   display: none;
+  position: absolute;
+  bottom: -30px;
+  left: 0;
 }
 
 .pop_up_head_body_input_box_coin img {
@@ -1975,6 +1979,36 @@ footer {
   box-shadow: 4px 4px 24px 0px #00000029;
 }
 
+.pop_up_head_body button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 40px;
+  background: linear-gradient(180deg, #FFF7E5 0%, #E0CB9A 58.59%);
+  border-radius: 40px;
+  border: 1px solid #FFFFFF52;
+  box-shadow: 4px 4px 24px 0px #A76F423D;
+  margin-top: 12px;
+  cursor: pointer;
+  transition: .3s;
+}
+.pop_up_head_body button:hover{
+  background: #DECA9B;
+  box-shadow: 1px 1px 4px 0px #FFFFFF, 4px 4px 8px 0px #848484 inset;
+}
+.pop_up_head_body button p{
+  color: #553216;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+.pop_up_head_body button img{
+  margin-right: 8px;
+}
+.pop_up_search_icon{
+  margin: 36px auto -32px auto;
+  display: block;
+}
 
 @media (max-width: 1170px) {
   .container {
@@ -2400,9 +2434,7 @@ footer {
     width: 450px;
   }
 
-  .pop_game_earth {
-    height: 437px;
-  }
+
 
   .pop_win_box {
     width: 256px;
@@ -2760,9 +2792,7 @@ footer {
     animation: moveOb3_1 45s ease-in-out forwards 13s;
   }
 
-  .pop_game_earth {
-    height: 337px;
-  }
+
 
   .pop_game_ob4_1 {
     left: 0px;
@@ -3098,15 +3128,17 @@ footer {
   .tasks_box_item_body p {
     font-size: 10px;
   }
+
   .pop_up {
     padding: 0 24px 24px 24px;
     min-width: 280px;
     max-width: 280px;
-}
-.pop_up_head {
-  width: calc(100% - 48px);
-  left: 24px;
-}
+  }
+
+  .pop_up_head {
+    width: calc(100% - 48px);
+    left: 24px;
+  }
 
 }
 
