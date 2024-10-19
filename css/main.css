@@ -2442,7 +2442,7 @@ footer {
 
   .pop_win_box {
     width: 256px;
-    top: 200px;
+    top: 290px;
     padding: 34px 24px;
   }
 
@@ -2463,11 +2463,12 @@ footer {
 
   .pop_win_lenta {
     width: 300px;
-    top: 170px;
+    top: 260px;
   }
 
   .pop_win_ura {
-    width: 340px;
+    width: auto;
+    height: 400px;
     top: 0px;
   }
 
