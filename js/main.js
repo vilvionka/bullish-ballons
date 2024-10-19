@@ -2,7 +2,7 @@
 
 
 (() => {
-  
+
   let coinMinus = document.querySelector('#coinMinus');
   let crystalsMinus = document.querySelector('#crystalsMinus');
   let coinPlus = document.querySelector('#coinPlus');
@@ -28,7 +28,7 @@
     const gambLk = e.composedPath().includes(crystalsPlus);
     const gambLk2 = e.composedPath().includes(coinPlus);
     if (!lkEl && !gambLk) {
-      if(!gambLk2){
+      if (!gambLk2) {
         popPlus.classList.remove('active');
       }
     }
@@ -40,7 +40,7 @@
     const gambLk = e.composedPath().includes(crystalsMinus);
     const gambLk2 = e.composedPath().includes(coinMinus);
     if (!lkEl && !gambLk) {
-      if(!gambLk2){
+      if (!gambLk2) {
         popMinus.classList.remove('active');
       }
     }
@@ -65,5 +65,26 @@
     }
 
   })
+
+})();
+
+(() => {
+  
+  let box = document.querySelectorAll('.js_pop_up_head_body_input_box');
+
+  for(let i = 0; i < box.length; i++){
+  box[i].addEventListener('click', function () {
+    let imgCoin = this.querySelector('.js_pop_up_head_body_input_box_coin');
+    let srcCoin = imgCoin.getAttribute('src');
+    if (srcCoin == './img/icon/ton_icon.svg') {
+      imgCoin.src = './img/icon/crystals.svg';
+      return;
+    } 
+    if(srcCoin == './img/icon/crystals.svg'){
+      imgCoin.src = './img/icon/ton_icon.svg';
+      return;
+    }
+  })
+}
 
 })();

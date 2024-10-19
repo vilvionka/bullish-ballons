@@ -1944,7 +1944,7 @@ footer {
   display: none;
   position: absolute;
   bottom: -30px;
-  left: 0;
+  left: -3px;
 }
 
 .pop_up_head_body_input_box_coin img {
@@ -1993,19 +1993,23 @@ footer {
   cursor: pointer;
   transition: .3s;
 }
-.pop_up_head_body button:hover{
+
+.pop_up_head_body button:hover {
   background: #DECA9B;
   box-shadow: 1px 1px 4px 0px #FFFFFF, 4px 4px 8px 0px #848484 inset;
 }
-.pop_up_head_body button p{
+
+.pop_up_head_body button p {
   color: #553216;
   font-size: 16px;
   text-transform: uppercase;
 }
-.pop_up_head_body button img{
+
+.pop_up_head_body button img {
   margin-right: 8px;
 }
-.pop_up_search_icon{
+
+.pop_up_search_icon {
   margin: 36px auto -32px auto;
   display: block;
 }
