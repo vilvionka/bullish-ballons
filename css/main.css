@@ -9,6 +9,9 @@ body {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
 }
+:root {
+  --app-height: 100%;
+}
 
 input {
   outline: none;
@@ -2386,7 +2389,7 @@ footer {
     justify-content: space-between;
     padding: 0 45px;
     align-items: center;
-    bottom: -300px;
+    bottom: -400px;
     left: 0;
     width: 100%;
     background: linear-gradient(180deg, #FFF7E5 0%, #E0CB9A 58.59%);
@@ -2636,6 +2639,7 @@ footer {
   .main {
     padding-bottom: 00px;
     height: calc(100vh - 70px);
+    height: calc(var(--app-height) - 70px);
   }
 
   .main_wrap_bottom {
