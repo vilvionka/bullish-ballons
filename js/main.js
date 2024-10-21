@@ -53,39 +53,41 @@
   let detals = document.querySelector('.js_main_wrap_detals');
   let popDetals = document.querySelector('.js_pop_detals');
 
-  detals.addEventListener('click', function () {
-    popDetals.classList.toggle('active');
-  })
+  if (detals) {
+    detals.addEventListener('click', function () {
+      popDetals.classList.toggle('active');
+    })
 
-  document.addEventListener('click', (e) => {
-    const lkEl = e.composedPath().includes(popDetals);
-    const gambLk = e.composedPath().includes(detals);
-    if (!lkEl && !gambLk) {
-      popDetals.classList.remove('active');
-    }
+    document.addEventListener('click', (e) => {
+      const lkEl = e.composedPath().includes(popDetals);
+      const gambLk = e.composedPath().includes(detals);
+      if (!lkEl && !gambLk) {
+        popDetals.classList.remove('active');
+      }
 
-  })
+    })
+  }
 
 })();
 
 (() => {
-  
+
   let box = document.querySelectorAll('.js_pop_up_head_body_input_box');
 
-  for(let i = 0; i < box.length; i++){
-  box[i].addEventListener('click', function () {
-    let imgCoin = this.querySelector('.js_pop_up_head_body_input_box_coin');
-    let srcCoin = imgCoin.getAttribute('src');
-    if (srcCoin == './img/icon/ton_icon.svg') {
-      imgCoin.src = './img/icon/crystals.svg';
-      return;
-    } 
-    if(srcCoin == './img/icon/crystals.svg'){
-      imgCoin.src = './img/icon/ton_icon.svg';
-      return;
-    }
-  })
-}
+  for (let i = 0; i < box.length; i++) {
+    box[i].addEventListener('click', function () {
+      let imgCoin = this.querySelector('.js_pop_up_head_body_input_box_coin');
+      let srcCoin = imgCoin.getAttribute('src');
+      if (srcCoin == './img/icon/ton_icon.svg') {
+        imgCoin.src = './img/icon/crystals.svg';
+        return;
+      }
+      if (srcCoin == './img/icon/crystals.svg') {
+        imgCoin.src = './img/icon/ton_icon.svg';
+        return;
+      }
+    })
+  }
 
 })();
 
