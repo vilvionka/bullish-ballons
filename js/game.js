@@ -148,7 +148,7 @@
     let box = document.querySelector('.js_pop_game_wrap').offsetHeight;
     let avatar = document.querySelector('.pop_game_wrap_avatar').offsetHeight;
     let ballons = document.querySelector('.pop_game_wrap_ballons').offsetHeight;
-    dl = box - avatar - ballons - 70;
+    dl = box - avatar - ballons - 60;
     x = 1000 / (dl / 60);
   }
 
@@ -174,3 +174,26 @@
 
 })();
 
+(() => {
+
+  let audi = document.querySelector('#audio');
+
+  let ctrl = document.getElementById('audioControl');
+
+  ctrl.onclick = function () {
+
+    // Update the Button
+    var pause = ctrl.innerHTML === 'Music off';
+    ctrl.innerHTML = pause ? 'Music on' : 'Music off';
+
+    // Update the Audio
+    var method = pause ? 'pause' : 'play';
+    audi[method]();
+
+    // Prevent Default Action
+    return false;
+  };
+
+ 
+
+})();

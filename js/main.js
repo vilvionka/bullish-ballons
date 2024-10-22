@@ -97,6 +97,29 @@
     doc.style.setProperty('--app-height', `${window.innerHeight}px`)
   }
   window.addEventListener('resize', appHeight)
-  appHeight()
+  appHeight();
+
+  let audi = document.querySelector('#audio');
+
+  let ctrl = document.getElementById('audioControl');
+
+  ctrl.onclick = function () {
+
+    // Update the Button
+    var pause = ctrl.innerHTML === 'Music off';
+    ctrl.innerHTML = pause ? 'Music on' : 'Music off';
+
+    // Update the Audio
+    var method = pause ? 'pause' : 'play';
+    audi[method]();
+
+    // Prevent Default Action
+    return false;
+  };
+
+  if (!audi.paused) {
+    ctrl.innerHTML = 'Music off';
+  }
+
 
 })();

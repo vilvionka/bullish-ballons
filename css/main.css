@@ -9,6 +9,7 @@ body {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
 }
+
 :root {
   --app-height: 100%;
 }
@@ -674,6 +675,18 @@ footer {
   flex-direction: column;
   align-items: center;
   width: calc(100%/5);
+  position: relative;
+}
+
+.pop_game_wrap_avatar_item::after {
+  content: '';
+  display: block;
+  bottom: -20px;
+  left: 10px;
+  width: calc(100% - 20px);
+  position: absolute;
+  height: 2px;
+  background: linear-gradient(180deg, #F68D2D 0%, #F33834 100%);
 }
 
 .pop_game_wrap_avatar_item span {
@@ -1124,9 +1137,40 @@ footer {
   }
 }
 
-.audio_game.none {
-  display: none !important;
+.audio_control {
+  position: fixed;
+  top: 30%;
+  right: calc((100% - 1130px)/2);
+  text-transform: uppercase;
+  font-family: 'Titan One';
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  text-align: center;
+  text-align: center;
+  background-color: #F33834;
+  background-image: linear-gradient(180deg, #F68D2D 0%, #F33834 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1.2px #FFFFFF;
+  text-stroke: 1.2px #FFFFFF;
+  text-transform: uppercase;
+  z-index: 21;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 24px;
+  border: 1px solid #FFFFFF;
+  padding: 5px 7px;
+  cursor: pointer;
+  opacity: .3;
+  transition: .3s;
 }
+
+.audio_control:hover {
+  opacity: 1;
+}
+
 
 .pop_win {
   z-index: 22;
@@ -1988,6 +2032,7 @@ footer {
   box-shadow: 4px 4px 24px 0px #00000029;
   transition: .3s;
 }
+
 .pop_up_head_body_submit:hover {
   box-shadow: 1px 1px 4px 0px #00000040, 8px 8px 8px 0px #00000052 inset;
 
@@ -2037,6 +2082,15 @@ footer {
 
   .pop_game_wrap {
     width: 850px;
+  }
+
+  .audio_control {
+    right: 20px;
+    font-size: 16px;
+    line-height: 16px;
+    -webkit-text-stroke: 1px #FFFFFF;
+    text-stroke: 1px #FFFFFF;
+    padding: 3px 5px;
   }
 }
 
@@ -3042,6 +3096,14 @@ footer {
 
   .faq_accordion_item .board_box_wrap:nth-child(3) span {
     font-size: 12px;
+  }
+
+  .audio_control {
+    right: 15px;
+    font-size: 14px;
+    line-height: 14px;
+    -webkit-text-stroke: 0.8px #FFFFFF;
+    text-stroke: 0.8px #FFFFFF;
   }
 
 
