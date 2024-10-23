@@ -681,9 +681,9 @@ footer {
 .pop_game_wrap_avatar_item::after {
   content: '';
   display: block;
-  bottom: -63px;
-  left: 10px;
-  width: calc(100% - 20px);
+  bottom: -43px;
+  left: 50px;
+  width: calc(100% - 100px);
   position: absolute;
   height: 8px;
   background-image: url(../img/icon/finish.svg);
@@ -1149,33 +1149,31 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 24px;
+  border-radius: 50%;
   border: 1px solid #FFFFFF;
-  padding: 5px 7px;
+  width: 48px;
+  height: 48px;
   cursor: pointer;
   transition: .3s;
 }
-.audio_control.game{
+
+.audio_control.game {
   right: 32px;
   top: 190px;
   z-index: 21;
 }
-.audio_control span{
+
+.audio_control span {
   display: block;
-  text-transform: uppercase;
-  font-family: 'Titan One';
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 18px;
-  text-align: center;
-  text-align: center;
-  background-color: #F33834;
-  background-image: linear-gradient(180deg, #F68D2D 0%, #F33834 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -webkit-text-stroke: 1.2px #FFFFFF;
-  text-stroke: 1.2px #FFFFFF;
-  text-transform: uppercase;
+  background-image: url(../img/icon/sound.svg);
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.audio_control span.active{
+  background-image: url(../img/icon/soundNo.svg);
 }
 
 .audio_control:hover {
@@ -2384,23 +2382,35 @@ footer {
   .leader_wrap_item .leader_wrap_item_box:nth-child(3) .leader_wrap_item_box_data {
     margin: 0 6px 0 12px;
   }
+
   .audio_control {
     top: 75px;
     right: 20px;
+    width: 24px;
+    height: 24px;
   }
-  .audio_control.game{
+  .audio_control span {
+    width: 12px;
+    height: 12px;
+  }
+
+  .audio_control.game {
     right: 97px;
     top: 12px;
     z-index: 21;
   }
-  .pop_game_wrap_avatar_item{
-    padding-bottom: 7px;
+
+  .pop_game_wrap_avatar_item {
+    padding-bottom: 37px;
   }
+
   .pop_game_wrap_avatar_item::after {
-    bottom: -23px;
+    bottom: -3px;
     height: 6px;
-    
-}
+    left: 30px;
+    width: calc(100% - 60px);
+
+  }
 
 }
 
@@ -3132,6 +3142,7 @@ footer {
     bottom: 55px;
     height: 24px;
   }
+
   .audio_control.game {
     right: 97px;
     top: 12px;
@@ -3139,7 +3150,7 @@ footer {
     height: 24px;
   }
 
-  .audio_control span{
+  .audio_control span {
     font-size: 14px;
     line-height: 14px;
     -webkit-text-stroke: 0.8px #FFFFFF;
@@ -3147,12 +3158,16 @@ footer {
   }
 
   .pop_game_wrap_avatar_item::after {
-    bottom: -25px;
+    bottom: -3px;
     height: 4px;
+    width: 40px;
+    height: 4px;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   .pop_game_wrap_avatar_item {
-    padding-bottom: 7px;
+    padding-bottom: 27px;
   }
 
 

@@ -103,22 +103,13 @@
   let ctrl = document.querySelector('#audioControl span');
 
   ctrl.onclick = function () {
-
-    // Update the Button
-    var pause = ctrl.innerHTML === 'Sound off';
-    ctrl.innerHTML = pause ? 'Sound on' : 'Sound off';
-
-    // Update the Audio
-    var method = pause ? 'pause' : 'play';
-    audi[method]();
-
-    // Prevent Default Action
-    return false;
+    ctrl.classList.toggle('active');
+    if(ctrl.classList.contains('active')){
+      audi.pause();
+    }else{
+      audi.play();
+    }
   };
-
-  if (!audi.paused) {
-    ctrl.innerHTML = 'Sound off';
-  }
 
 
 })();
