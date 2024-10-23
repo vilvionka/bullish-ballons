@@ -100,14 +100,13 @@
   appHeight();
 
   let audi = document.querySelector('#audio');
-
-  let ctrl = document.getElementById('audioControl');
+  let ctrl = document.querySelector('#audioControl span');
 
   ctrl.onclick = function () {
 
     // Update the Button
-    var pause = ctrl.innerHTML === 'Music off';
-    ctrl.innerHTML = pause ? 'Music on' : 'Music off';
+    var pause = ctrl.innerHTML === 'Sound off';
+    ctrl.innerHTML = pause ? 'Sound on' : 'Sound off';
 
     // Update the Audio
     var method = pause ? 'pause' : 'play';
@@ -118,7 +117,7 @@
   };
 
   if (!audi.paused) {
-    ctrl.innerHTML = 'Music off';
+    ctrl.innerHTML = 'Sound off';
   }
 
 

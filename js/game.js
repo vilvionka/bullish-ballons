@@ -148,7 +148,7 @@
     let box = document.querySelector('.js_pop_game_wrap').offsetHeight;
     let avatar = document.querySelector('.pop_game_wrap_avatar').offsetHeight;
     let ballons = document.querySelector('.pop_game_wrap_ballons').offsetHeight;
-    dl = box - avatar - ballons - 60;
+    dl = box - avatar - ballons - 40;
     x = 1000 / (dl / 60);
   }
 
@@ -177,14 +177,13 @@
 (() => {
 
   let audi = document.querySelector('#audio');
-
-  let ctrl = document.getElementById('audioControl');
+  let ctrl = document.querySelector('#audioControl span');
 
   ctrl.onclick = function () {
 
     // Update the Button
-    var pause = ctrl.innerHTML === 'Music off';
-    ctrl.innerHTML = pause ? 'Music on' : 'Music off';
+    var pause = ctrl.innerHTML === 'Sound off';
+    ctrl.innerHTML = pause ? 'Sound on' : 'Sound off';
 
     // Update the Audio
     var method = pause ? 'pause' : 'play';
@@ -194,6 +193,9 @@
     return false;
   };
 
- 
+  if (!audi.paused) {
+    ctrl.innerHTML = 'Sound off';
+  }
+
 
 })();
