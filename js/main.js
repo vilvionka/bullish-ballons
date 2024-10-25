@@ -113,3 +113,17 @@
 
 
 })();
+
+
+(() => {
+   
+  let loader = document.querySelector('.js_preloader');
+   
+  setTimeout(function () {
+    loader.classList.remove('active');
+  }, 8000);
+
+
+})();
+
+

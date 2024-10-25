@@ -126,7 +126,8 @@ header {
 
 .header_nav_center a img {
   margin: 0 27px;
-
+  width: 80px;
+  margin-top: 45px;
 }
 
 .header_nav_center_logo {
@@ -146,6 +147,7 @@ header {
   top: 20px;
   right: 2px;
   z-index: 2;
+  display: none;
 }
 
 .header_nav_right_user_info {
@@ -1172,7 +1174,8 @@ footer {
   background-size: cover;
   background-position: center;
 }
-.audio_control span.active{
+
+.audio_control span.active {
   background-image: url(../img/icon/soundNo.svg);
 }
 
@@ -2081,6 +2084,65 @@ footer {
   margin: 36px auto -32px auto;
   display: block;
 }
+.preloader.active{
+  display: flex;
+}
+
+.preloader {
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #FFF7E5 0%, #E0CB9A 58.59%);
+  z-index: 100;
+  position: relative;
+  display: none;
+}
+
+.preloader_box {
+  width: 120px;
+  height: 120px;
+  position: relative;
+}
+
+.preloader_box span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: rotate(calc(18deg * var(--i)));
+  animation: animateBg 10s linear infinite;
+}
+@keyframes animateBg{
+  0%{
+   filter: hue-rotate(0deg);
+  }
+  100%{
+    filter: hue-rotate(360deg);
+  }
+}
+
+.preloader_box span::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  background: #fff;
+  box-shadow: 0 0 10px #F68D2D, 0 0 20px #F68D2D, 0 0 40px #F68D2D, 0 0 60px #F68D2D, 0 0 80px #F68D2D, 0 0 100px #F68D2D;
+  border-radius: 50%;
+  animation: animate 2s linear infinite;
+  animation-delay: calc(0.1s * var(--i));
+}
+@keyframes animate{
+  0%{
+   transform: scale(1);
+  }
+  80%,100%{
+    transform: scale(0);
+  }
+}
 
 @media (max-width: 1170px) {
   .container {
@@ -2389,6 +2451,7 @@ footer {
     width: 24px;
     height: 24px;
   }
+
   .audio_control span {
     width: 12px;
     height: 12px;
@@ -3169,6 +3232,17 @@ footer {
   .pop_game_wrap_avatar_item {
     padding-bottom: 27px;
   }
+  .preloader_box {
+    width: 80px;
+    height: 80px;
+    position: relative;
+  }
+  
+.preloader_box span::before {
+  width: 11px;
+  height: 11px;
+  box-shadow: 0 0 5px #F68D2D, 0 0 10px #F68D2D, 0 0 15px #F68D2D, 0 0 20px #F68D2D, 0 0 25px #F68D2D, 0 0 30px #F68D2D;
+}
 
 
 }
